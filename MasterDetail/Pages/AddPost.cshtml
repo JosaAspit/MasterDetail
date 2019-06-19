@@ -1,0 +1,26 @@
+﻿@page
+@model MasterDetail.Pages.AddPostModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddPost</title>
+</head>
+<body>
+    <form method="post">
+        @Html.AntiForgeryToken()
+        <label for="Title">Title</label>
+        <input name="Post.Title" type="text" />
+        <label for="Author">Author</label>
+        <input name="Post.Author" type="text" />
+        <label for="Body">Body</label>
+        <input name="Post.Body" type="text" />
+        <input type="submit" value="Send ny Post">
+    </form>
+</body>
+</html>

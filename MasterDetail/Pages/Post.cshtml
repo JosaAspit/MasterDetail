@@ -1,0 +1,28 @@
+﻿@page "{id?}"
+@model MasterDetail.Pages.PostModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Post</title>
+</head>
+<body>
+    @if (Model.Post != null)
+    {
+        <article>
+            <h1>@Model.Post.Title</h1>
+            <h3>@Model.Post.Author</h3>
+            <p>@Model.Post.Body</p>
+            <p>@Model.Post.PostDate</p>
+        </article>
+    } else
+    {
+        <h1>Kunne ikke finde din post</h1>
+    }
+</body>
+</html>

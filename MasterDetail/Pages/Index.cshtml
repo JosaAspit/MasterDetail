@@ -1,0 +1,31 @@
+﻿@page
+@model MasterDetail.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <ul>
+        <li><a href="AddPost">Ny Post</a></li>
+    </ul>
+    <table>
+        @foreach (var item in Model.Posts)
+        {
+            <tr>
+                <td><a href="Post/@item.Id">Næste Post</a></td>
+                <td>@item.Author</td>
+                <td>@item.Title</td>
+                <td>@item.BodyShort</td>
+                <td>@item.PostDate.ToShortDateString()</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
